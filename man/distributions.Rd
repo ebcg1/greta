@@ -30,6 +30,10 @@
 \alias{categorical}
 \alias{dirichlet}
 \alias{dirichlet_multinomial}
+\alias{zero_inflated_poisson}
+\alias{zero_inflated_negative_binomial}
+\alias{zero_inflated_lognormal}
+\alias{zero_inflated_gamma}
 \title{probability distributions}
 \usage{
 uniform(min, max, dim = NULL)
@@ -87,6 +91,14 @@ categorical(prob, n_realisations = NULL, dimension = NULL)
 dirichlet(alpha, n_realisations = NULL, dimension = NULL)
 
 dirichlet_multinomial(size, alpha, n_realisations = NULL, dimension = NULL)
+
+zero_inflated_poisson(theta, lambda, dim = NULL)
+
+zero_inflated_negative_binomial(theta, size, prob, dim = NULL)
+
+zero_inflated_lognormal(theta, meanlog, sdlog, dim = NULL)
+
+zero_inflated_gamma(theta, shape, rate, dim = NULL, truncation = c(0, Inf))
 }
 \arguments{
 \item{min, max}{scalar values giving optional limits to \code{uniform}
